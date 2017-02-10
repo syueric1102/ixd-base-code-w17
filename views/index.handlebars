@@ -13,52 +13,16 @@
 			<button onclick="instructions()"; class='ph-button ph-btn-grey'>Instructions</a></button>
 		</div><br>	
 		<div align = "middle"; class="form-style-5">
-			<input type="text" id="input1" placeholder="Array length / User defined array">
+			<input type="text" id="input1" placeholder="Enter class or professor name">
 		</div>
 		<div align = "middle">
-			<button onclick="myJsFunction()"; class='ph-button ph-btn-grey'>Sort Random Array!</a>
+			<button onclick="myJsFunction()"; class='ph-button ph-btn-grey'>Search</a>
 			</button>
 			&nbsp;
-			<button onclick="myJsFunction2()"; class='ph-button ph-btn-grey'>Sort My Array!</a>
+			<button onclick="myJsFunction2()"; class='ph-button ph-btn-grey'>Analyze</a>
 			</button>
 		</div>
 		<div align="middle"; id ='chartDiv'>
-			<script>
-			//initialize a blank chart
-			var chartData={
-				globals:{
-					fontFamily:"Palatino Linotype",
-					fontColor:"#545454",
-				},
-				"type":"bar",
-				backgroundColor: "#adcceb",
-				title:{
-					text: "Algorithm Speed (ms)"
-				},
-				"scale-y": {
-    					label:{
-        					text:"Sorting Time (Milliseconds)",
-    					},
-				},
-				"scale-x":{
-					values:["QuickSort","BubbleSort","MergeSort","InsertionSort","SelectionSort"]
-				},
-				plot:{
-					alpha:0.8,
-					borderRadius:"4px",
-					backgroundColor: "#6699ff"
-				},
-				"series":[
-				{ "values": [0, 0, 0, 0, 0]},
-				]
-			};
-			zingchart.render({
-				id:'chartDiv',
-				data:chartData,
-				height:400,
-				width:600
-			});	
-		</script>
 	</div>
 	</body>
 	</html>
