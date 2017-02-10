@@ -1,0 +1,98 @@
+body {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	background-color: #adcceb;
+	margin: 10px auto;
+	width: 47%;
+	height: 47%;    
+}
+
+.container {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.container div {
+    width:100%;
+}
+.container .header {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.container .content {
+    display: none;
+    padding : 5px;
+}
+
+.ph-button {
+	
+	border-style: solid;
+	border-width: 0px 0px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	color: #ffffff;	   
+	border-radius: 6px;
+	cursor: pointer;
+	display: inline-block;
+	font-style: normal;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	transition: all 200ms ease-in-out 0s;
+	white-space: nowrap;	
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 700;	
+	padding: 10px 10px 9px;
+	font-size: 14px;
+	margin: 10px auto;
+}
+
+.ph-btn-grey {
+
+	background-color: #1abc9c;
+	border-color: #16a085;
+}
+.ph-btn-grey:hover, .ph-btn-grey:focus, .ph-btn-grey:active {
+	background-color: #999999;
+	border-color: #8c8c8c; 
+}
+
+<style type="text/css">
+.form-style-5{
+	max-width: 600px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 0px auto;
+	padding: 10px;
+	background: #f4f7f8;
+	border-radius: 8px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.form-style-5 input[type="text"],
+.form-style-5 textarea,
+.form-style-5 select {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	margin: 0;
+	outline: 0;
+	padding: 7px;
+	width: 600px;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 10px;
+
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 select:focus{
+	background: #e6e6e6;
+}
+</style>
