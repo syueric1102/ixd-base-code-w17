@@ -1,14 +1,182 @@
-<DOCTYPE html>
-	<html>
-	<head>
-		<title>Search Results</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css ">
-		<p align="middle"; style="color:#545454; font-size: 40">Results Page</p>
-	</head>
-	<body>
-		<div align = "middle">
-			<button onclick="location.href='/';"; class='ph-button ph-btn-grey'>Back</a></button>
-		</div><br>	
-	</div>
-	</body>
-	</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tonalysis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #3e8e41;
+        }
+        #myInput {
+            border-box: box-sizing;
+            background-image: url('searchicon.png');
+            background-position: 14px 12px;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            padding: 14px 20px 12px 45px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd}
+
+        .show {display:block;}
+        </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Tonalysis
+                    </a>
+                </li>
+                <li>
+                    <a href="/Search">Browse Professors</a>
+                </li>
+                <li>
+                    <a href="#">Instructions</a>
+                </li>
+                <li>
+                    <a href="/">Log Out</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+                        <h1>Professors</h1>
+                        <p>Select a a professor from the dropdown below, then select a class.</p>
+
+                            <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">Select Professor</button>
+                              <div id="myDropdown" class="dropdown-content">
+                                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                    <a href="#about">Klemmer, Scott	</a>
+                                    <a href="#about">Rivera-Collazo, Isabel C	</a>
+                                    <a href="#about">Lafleur, Marni M	</a>
+                                    <a href="#about">Feng, Gen-Sheng	</a>
+                                    <a href="#about">Soowal, Lara	</a>
+                                    <a href="#about">Chilukuri, Lakshmi N	</a>
+                                    <a href="#about">Day, Christopher D	</a>
+                                    <a href="#about">Lo, Stanley Malvin Ming-Hi	</a>
+                                    <a href="#about">Teodorof, Carmen	</a>
+                                    <a href="#about">Posakony, James W	</a>
+                                    <a href="#about">Goldrath, Ananda	</a>
+                                    <a href="#about">Holway, David A.	</a>
+                                    <a href="#about">Chao, Lin	</a>
+                                    <a href="#about">Nieh, James Charles	</a>
+                                    <a href="#about">Mel, Stephanie	</a>
+                              </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function filterFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("myDropdown");
+        a = div.getElementsByTagName("a");
+        for (i = 0; i < a.length; i++) {
+            if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+            } else {
+                a[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+
+</body>
+
+</html>
