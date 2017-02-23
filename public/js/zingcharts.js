@@ -31,7 +31,7 @@ var myConfig = {
  	title: {
  	  fontColor: "#8e99a9",
  	  text: 'Average Emotions',
- 	  align: "left",
+ 	  align: "center",
  	  offsetX: 5,
  	  fontFamily: "Open Sans",
  	  fontSize: 25

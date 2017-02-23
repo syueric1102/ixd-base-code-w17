@@ -12,7 +12,7 @@ var index = require('./routes/index');
 var analysis = require('./routes/analysis');
 var search = require('./routes/search');
 var homepage = require('./routes/homepage');
-var professor = require('./routes/professor');
+var classInfo = require('./routes/classInfo');
 // Example route
 // var user = require('./routes/user');
 
@@ -43,7 +43,8 @@ app.get('/', index.view);
 app.get('/analysis', analysis.view);
 app.get('/search', search.view);
 app.get('/homepage', homepage.view);
-app.get('/professor', professor.view);
+app.get('/classInfo', classInfo.view);
+app.get('/classInfo/:name', classInfo.view);
 // Example route
 // app.get('/users', user.list);
 
