@@ -10,7 +10,7 @@ $(document).ready(function() {
  */
 function initializePage() {
 	for(var i = 0; i < searchdata.PodcastClass.length; i++) {
-		$('#myUL').append("<li><a href='classInfo/" + i + "'><h3>" + searchdata.PodcastClass[i].Class + "</h3></a><h4>" + searchdata.PodcastClass[i].Prof + "</h4></li>")
+		$('#myUL').append("<li><a href='classInfo/" + i + "'><h3>" + searchdata.PodcastClass[i].Class + "</h3></a><h4>" + searchdata.PodcastClass[i].Prof + "</h4></li>");
 	}
 	
 }
