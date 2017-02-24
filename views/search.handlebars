@@ -115,7 +115,7 @@
                     -->
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
 
-                        <h1>Professors</h1>
+                        <h1>Classes</h1>
                     
                         <p>Search for a class from the dropdown below</p>
 
@@ -123,11 +123,13 @@
                             <button onclick="myFunction()" class="dropbtn">Select Class</button>
                               <div id="myDropdown" class="dropdown-content">
                                 <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                
                                 {{#each PodcastClass}}
                                   <div>
                                     <a href="classInfo/{{Class}}">{{Class}}</a>
                                   </div>
                                 {{/each}}
+                                
                               </div>
                             </div>
                     </div>
@@ -175,7 +177,7 @@
         }
     }
     </script>
-    <script src="js/search.js"></script>
+    <!--<script src="js/search.js"></script>-->
 
 </body>
 
