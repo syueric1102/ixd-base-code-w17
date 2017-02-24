@@ -44,7 +44,7 @@ app.get('/analysis', analysis.view);
 app.get('/search', search.view);
 app.get('/homepage', homepage.view);
 app.get('/classInfo', classInfo.view);
-app.get('/classInfo/:name', classInfo.view);
+app.get('/classInfo/:id', classInfo.view);
 app.post
 // Example route
 // app.get('/users', user.list);

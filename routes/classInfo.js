@@ -2,14 +2,16 @@
 /*
  * GET class info page.
  */
+var data = require('../podcastdata.json');
 
 exports.view = function(req, res) { 
   // controller code goes here 
-  var nameClass = req.params.name; 
-  console.log("The project name is: " + nameClass);
+  var id = req.params.id; 
+  console.log("The class id is: " + id);
   res.render('classInfo', {
-    'class': nameClass,
+    'id': id,
   });
 };
 
+console.log(data.PodcastClass[0].Prof);
 
