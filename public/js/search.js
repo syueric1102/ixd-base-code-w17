@@ -14,5 +14,3 @@ function initializePage() {
 	}
 	
 }
-
-console.log(searchdata.PodcastClass[1].Prof);
