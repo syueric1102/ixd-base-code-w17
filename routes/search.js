@@ -8,3 +8,5 @@ exports.view = function(req, res){
   res.render('search', data);
 };
 
+console.log(data.PodcastClass[2].Prof);
+
