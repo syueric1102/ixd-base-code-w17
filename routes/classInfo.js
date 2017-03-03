@@ -3,7 +3,9 @@
  * GET class info page.
  */
 
-var plotly = require('plotly')('EricSyu', 'Rmjd5Ul2iwKKxcx2DiLt');
+var Temper;
+var Valence;
+var Excitement;
 
 var fs = require('fs');
 var Analyzer = require('../analyzer-v3');
@@ -14,10 +16,6 @@ var analysisdata;
 exports.view = function(req, res) { 
   // controller code goes here 
   var id = req.params.id; 
-
-  res.render('classInfo', {
-    'id': id,
-  });
 
   var analyzer = new Analyzer('a371a3f6-55d6-4d4d-aab4-9b5c296483e1');
 
@@ -30,11 +28,30 @@ exports.view = function(req, res) { 
   // The file *does* exist
   else {
     analyzer.analyze(fs.createReadStream(audio),function(err,analysis){
-      console.log(JSON.stringify(analysis));
-      analysisdata = JSON.stringify(analysis);
-      fs.writeFileSync('./test.json', analysisdata, 'utf-8');
-    });
-  }
-  console.log("id is " + id);
+      //console.log(JSON.stringify(analysis.result.analysisSegments[0].analysis.Temper.Value));
+      Temper = analysis.result.analysisSegments[0].analysis.Temper.Value;
+      Valence = analysis.result.analysisSegments[0].analysis.Valence.Value;
+      Excitement = analysis.result.analysisSegments[0].analysis.Arousal.Value;
 
+      console.log("id is " + id);
+      console.log("Temper is " + Temper);
+      console.log("Valence is " + Valence);
+      console.log("Excitement is " + Excitement);
+      //fs.writeFileSync('./test.json', analysisdata, 'utf-8');
+      //console.log("test here: " + JSON.stringify(analysis);
+    });
+
+    res.render('classInfo', {
+        'id': id,
+        'Temper' : Temper,
+        'Valence' : Valence,
+        'Excitement' : Excitement
+    });
+
+    /*
+    Temper = analysisdata.results.analysisSegments.analysis.Temper.Value;
+    Valence = 
+    Excitement = 
+    */
+  }
 };
