@@ -2,7 +2,7 @@ import json,urllib
 
 count = 0
 
-with open("testpodcastdata.json") as json_file:
+with open("podcastdata.json") as json_file:
     json_data = json.load(json_file)
 for item in json_data["PodcastClass"]:
 	if "selection3_url" not in item:
