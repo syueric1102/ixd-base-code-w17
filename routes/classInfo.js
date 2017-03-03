@@ -6,7 +6,13 @@
 var Temper;
 var Valence;
 var Excitement;
+/*
+var TemperColor = "red";
+var ValenceColor = "blue";
+var ExcitementColor = "green";
 
+var dominantColor = "";
+*/
 var fs = require('fs');
 var Analyzer = require('../analyzer-v3');
 
@@ -37,6 +43,8 @@ exports.view = function(req, res) { 
       console.log("Temper is " + Temper);
       console.log("Valence is " + Valence);
       console.log("Excitement is " + Excitement);
+      //dominantColor = 
+
       //fs.writeFileSync('./test.json', analysisdata, 'utf-8');
       //console.log("test here: " + JSON.stringify(analysis);
     });
