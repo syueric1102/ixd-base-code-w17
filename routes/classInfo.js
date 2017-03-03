@@ -18,12 +18,13 @@ exports.view = function(req, res) { 
   });
 
   var analyzer = new Analyzer('a371a3f6-55d6-4d4d-aab4-9b5c296483e1')
-  var audio = '/Users/ericsyu/Documents/School/UCSD/Winter\ 2017/COGS120/Tonalysis/audioedited/0edited.wav'
+  var audio = './audioedited/' + id + 'edited.wav'
   console.log(id);
 
   analyzer.analyze(fs.createReadStream(audio),function(err,analysis){
     console.log(JSON.stringify(analysis));
   	analysisdata = JSON.stringify(analysis);
+    fs.writeFileSync('./test.json', analysisdata, 'utf-8');
   });
 
 };
