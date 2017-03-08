@@ -71,10 +71,6 @@
                         
                         <div style="text-align: center"><a onclick="move()" class="btn btn-default">View Analysis</a></div>
                         <br>
-                        <div id ="myProgress", style="width:100%; background-color:grey; text-align:center">
-                          <div id="myBar", style="width:0%; height:30px; background-color:blue; text-align:center; line-height:30px; color:white;">0%</div>
-                        </div>
-                        <br>
 
                         <!--<div>temper is {{Temper}}</div>-->
                         <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/"></a></div>
@@ -182,23 +178,6 @@
             height: '100%', 
             width: '100%' 
         });
-    </script>
-    <script>
-      function move() {
-        var elem = document.getElementById("myBar"); 
-        var width = 1;
-        var id = setInterval(frame, 50);
-        function frame() {
-            if (width >= 100) {
-                clearInterval(id);
-                location.reload();
-            } else {
-                width++; 
-                elem.style.width = width + '%'; 
-                elem.innerHTML = width * 1 + '%';
-            }
-        }
-      }
     </script>
 
     <script src="../js/loadClassInfo.js"></script>

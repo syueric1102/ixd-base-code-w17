@@ -29,6 +29,14 @@ exports.view = function(req, res) { 
 
   if(!fs.existsSync(audio)) {
     console.log("File not found"); 
+    res.setTimeout(3000, function(){
+      res.render('classInfo', {
+        'id': id,
+        'Temper' : Temper,
+        'Valence' : Valence,
+        'Excitement' : Excitement
+      });
+    })
   }
 
   // The file *does* exist
@@ -43,23 +51,26 @@ exports.view = function(req, res) { 
       console.log("Temper is " + Temper);
       console.log("Valence is " + Valence);
       console.log("Excitement is " + Excitement);
+      res.setTimeout(3000, function(){
+        res.render('classInfo', {
+          'id': id,
+          'Temper' : Temper,
+          'Valence' : Valence,
+          'Excitement' : Excitement
+        });
+      })
       //dominantColor = 
 
       //fs.writeFileSync('./test.json', analysisdata, 'utf-8');
       //console.log("test here: " + JSON.stringify(analysis);
     });
-
+    /*
     res.render('classInfo', {
         'id': id,
         'Temper' : Temper,
         'Valence' : Valence,
         'Excitement' : Excitement
     });
-
-    /*
-    Temper = analysisdata.results.analysisSegments.analysis.Temper.Value;
-    Valence = 
-    Excitement = 
     */
   }
 };
