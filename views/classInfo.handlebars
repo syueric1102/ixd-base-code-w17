@@ -68,9 +68,6 @@
                         <div id='profname'></div>
                         <!--<div id='podcastlink'></div>-->
                         <br>
-                        
-                        <div style="text-align: center"><a onclick="move()" class="btn btn-default">View Analysis</a></div>
-                        <br>
 
                         <!--<div>temper is {{Temper}}</div>-->
                         <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/"></a></div>
@@ -101,6 +98,12 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+    </script>
+    <script>
+      var err = {{errorFlag}};
+      if (err == true) {
+        alert("Alert: This podcast is restricted to students who are enrolled in this class.  We apologize for any inconvenience.");
+      }
     </script>
     <script>
         var myConfig = {

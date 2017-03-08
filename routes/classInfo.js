@@ -6,6 +6,7 @@
 var Temper;
 var Valence;
 var Excitement;
+var errorFlag = false;
 /*
 var TemperColor = "red";
 var ValenceColor = "blue";
@@ -29,12 +30,14 @@ exports.view = function(req, res) { 
 
   if(!fs.existsSync(audio)) {
     console.log("File not found"); 
+    errorFlag = true;
     res.setTimeout(3000, function(){
       res.render('classInfo', {
         'id': id,
         'Temper' : Temper,
         'Valence' : Valence,
-        'Excitement' : Excitement
+        'Excitement' : Excitement,
+        'errorFlag' : errorFlag
       });
     })
   }
@@ -56,7 +59,8 @@ exports.view = function(req, res) { 
           'id': id,
           'Temper' : Temper,
           'Valence' : Valence,
-          'Excitement' : Excitement
+          'Excitement' : Excitement,
+          'errorFlag' : errorFlag
         });
       })
       //dominantColor = 
