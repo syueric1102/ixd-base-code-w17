@@ -24,6 +24,23 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        'use strict';
+
+        // Call this function when the page loads (the "ready" event)
+        $(document).ready(function() {
+            initializePage();
+        });
+
+        /*
+         * Function that is called when the document is ready.
+         */
+        function initializePage() {
+            // your code here
+            ga('send', 'event', 'like', 'click');
+        }
+    </script>
+
 </head>
 
 <body>

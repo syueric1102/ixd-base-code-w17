@@ -15,6 +15,24 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
+
+<script>
+	'use strict';
+
+	// Call this function when the page loads (the "ready" event)
+	$(document).ready(function() {
+		initializePage();
+	});
+
+	/*
+	 * Function that is called when the document is ready.
+	 */
+	function initializePage() {
+		// your code here
+		ga('send', 'event', 'like', 'click');
+	}
+</script>
+
   <meta charset="UTF-8">
   <title>Login Form</title>
   
