@@ -28,12 +28,13 @@
     <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
     <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
         ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
     <link href="../css/zc.css" rel="stylesheet">
 
 </head>
 
-<!--<body style="background-color:#4DFFFF">-->
-<body>
+<body style="background-color:rgb({{r}}, {{g}}, {{b}})">
+<!--<body>-->
 
     <div id="wrapper">
 
@@ -100,8 +101,7 @@
     });
     </script>
     <script>
-      var err = {{errorFlag}};
-      if (err == true) {
+      if ({{errorFlag}} == true) {
         alert("Alert: This podcast is restricted to students who are enrolled in this class.  We apologize for any inconvenience.");
       }
     </script>
@@ -170,7 +170,7 @@
                 {
                   values: [{{Excitement}}],
                   text: 'Excitement',
-                  backgroundColor: '#FFCB45',
+                  backgroundColor: '#00B200',
                 }
             ]
         };
