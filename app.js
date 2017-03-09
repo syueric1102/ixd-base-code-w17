@@ -13,6 +13,13 @@ var analysis = require('./routes/analysis');
 var search = require('./routes/search');
 var homepage = require('./routes/homepage');
 var classInfo = require('./routes/classInfo');
+
+var index2 = require('./routes/index-B');
+var analysis2 = require('./routes/analysis-B');
+var search2 = require('./routes/search-B');
+var homepage2 = require('./routes/homepage-B');
+var classInfo2 = require('./routes/classInfo-B');
+
 /*
 var fs = require('fs');
 var Analyzer = require('./analyzer-v3');
@@ -53,7 +60,13 @@ app.get('/search', search.view);
 app.get('/homepage', homepage.view);
 app.get('/classInfo', classInfo.view);
 app.get('/classInfo/:id', classInfo.view);
-//app.post('/classInfo/:id', classInfo.analyze);
+
+app.get('/new', index2.view2);
+app.get('/new/analysis', analysis2.view2);
+app.get('/new/search', search2.view2);
+app.get('/new/homepage', homepage2.view2);
+app.get('/new/classInfo', classInfo2.view2);
+app.get('/new/classInfo/:id', classInfo2.view2);
 
 // Example route
 // app.get('/users', user.list);
