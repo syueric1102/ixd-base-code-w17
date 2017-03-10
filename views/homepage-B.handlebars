@@ -81,7 +81,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                         <h1>Tonalysis Version B</h1>
                         <p>Welcome to Tonalysis Version B!  Have you ever wondered what your professors are feeling?  what is their mood when they are teaching their class?  Is this a class that you want to take?  Tonalysis will break it down for you.</p>
 
-                        <div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
+                        <div class="like"><button id="likebtn" class="btn btn-default like">Like</button></div>
                     </div>
                 </div>
             </div>
@@ -111,8 +111,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
          */
         function initializePage() {
             // your code here
-            ga('send', 'event', 'like', 'click');
+            $("#likebtn").click(function() {
+                ga('send', 'event', 'like', 'click');
+            });
         }
+
     </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

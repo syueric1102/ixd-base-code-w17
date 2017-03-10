@@ -16,6 +16,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
 
+<script src="js/jquery.js"></script>
 
 <script>
 	'use strict';
@@ -29,8 +30,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	 * Function that is called when the document is ready.
 	 */
 	function initializePage() {
-		// your code here
-		ga('send', 'event', 'like', 'click');
+        $("#likebtn").click(function() {
+            ga('send', 'event', 'like', 'click');
+        });
 	}
 </script>
 
@@ -114,6 +116,8 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
         <button onclick="location.href='/new/homepage'" id="submitbutton" class="btn btn-primary btn-block btn-large">Login</button>
         <button type="submit" class="btn btn-primary btn-block btn-large">Sign Up</button>
         <button type="submit" class="btn btn-primary btn-block btn-large">Forgot Password</button>
+        <br>
+        <div class="like" style="text-align:center"><button id="likebtn" class="btn btn-default like">Like</button></div>
 </div>
   
 <script>
