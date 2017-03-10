@@ -22,4 +22,8 @@ function initializePage() {
                     "<source src='" + searchdata.PodcastClass[id].selection3_url + "' type='video/ogg'>" +
                     "Your browser does not support the video tag." + 
                     "</video>");
+  $('#vid2').append("<audio controls>" +  
+                    "<source src='" + "/audioedited/" + id + "edited.wav" + "' type='audio/wav'>" + 
+                    "Your browser does not support the audio tag." + 
+                    "</audio>");
 }

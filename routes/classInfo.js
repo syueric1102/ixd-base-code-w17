@@ -26,7 +26,7 @@ exports.view = function(req, res) { 
 
   var analyzer = new Analyzer('a371a3f6-55d6-4d4d-aab4-9b5c296483e1');
 
-  var audio = './audioedited/' + id + 'edited.wav';
+  var audio = './public/audioedited/' + id + 'edited.wav';
 
   if(!fs.existsSync(audio)) {
     console.log("File not found"); 
